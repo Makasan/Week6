@@ -1,11 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-int main() 
-{
-	char str[4];
-	int num[3], sum = 0, i, j, A, B, C;
-	scanf("%d %d %d", &num[0], &num[1], &num[2]);
-	scanf("%s", &str);
+char str[4];
+int num[3], sum = 0, i, j, A, B, C;
+
+
+void check() {
+	
 	for (j = 0; j < 3; j++)
 	{
 		sum = 0;
@@ -22,33 +22,40 @@ int main()
 				break;
 			}
 		}
-		if (j == 0) 
+		if (j == 0)
 		{
 			C = sum;
 		}
-		else if (j == 1) 
+		else if (j == 1)
 		{
 			B = sum;
 		}
-		else 
+		else
 		{
 			A = sum;
 		}
 	}
-	for (j = 0; j < 3; j++) 
+	for (j = 0; j < 3; j++)
 	{
-		if (str[j] == 'A') 
+		if (str[j] == 'A')
 		{
 			printf("%d ", A);
 		}
-		else if (str[j] == 'B') 
+		else if (str[j] == 'B')
 		{
 			printf("%d ", B);
 		}
-		else if (str[j] == 'C') 
+		else if (str[j] == 'C')
 		{
 			printf("%d ", C);
 		}
 	}
+}
+int main() 
+{
+	scanf("%d %d %d", &num[0], &num[1], &num[2]);
+	scanf("%s", &str);
+	check();
+
 	return 0;
 }
